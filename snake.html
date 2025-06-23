@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Snake Game</title>
+    <link rel="icon" href="img/Snake_logo.png" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="img/snakeb2.png" alt="Wilkommen-zu-Snake-Spiel"
+      /></a>
+    </header>
+    <main>
+      <div id="gameContainer">
+        <p>Punkte: <span id="scoreText">0</span></p>
+        <p>Highscore: <span id="highscore">0</span></p>
+        <canvas id="gameBoard" width="500" height="500"></canvas>
+
+        <div id="gameOverScreen">
+          <button id="resetBtn">Neu starten</button>
+        </div>
+      </div>
+      <div>
+        <a href="highscore.html">Highscore Liste</a>
+      </div>
+      <script src="snake.js"></script>
+    </main>
+  </body>
+</html>

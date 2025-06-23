@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Snake Game</title>
+    <link rel="icon" href="img/Snake_logo.png" type="image/x-icon" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="index.html"
+        ><img src="img/snakeb2.png" alt="Wilkommen-zu-Snake-Spiel"
+      /></a>
+    </header>
+    <main>
+      <div class="buttonContainer">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" placeholder="Name eingeben" />
+        <br /><br />
+        <button id="button">Spiel starten</button>
+      </div>
+    </main>
+    <script>
+      document.getElementById("button").addEventListener("click", () => {
+        const username = document.getElementById("username").value.trim();
+        if (username) {
+          localStorage.setItem("snakeUsername", username);
+          window.location.href = "snake.html";
+        } else {
+          alert("Bitte gib einen Namen ein!");
+        }
+      });
+    </script>
+  </body>
+</html>
